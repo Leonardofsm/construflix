@@ -64,8 +64,8 @@ const Input = styled.input`
   ${({ value }) => {
     const hasValue = value.length > 0;
     return (
-      hasValue &&
-      css`
+      hasValue
+      && css`
         &:not([type="color"]) + ${Label.Text} {
           transform: scale(0.6) translateY(-10px);
         }
@@ -74,7 +74,9 @@ const Input = styled.input`
   }}
 `;
 
-function FormField({ label, type, value, name, onChange }) {
+function FormField({
+ label, type, value, name, onChange,
+}) {
   const fieldId = `id_${name}`;
   const isTypeTextArea = type === 'textarea';
   const tag = isTypeTextArea ? 'textarea' : 'input';
@@ -94,7 +96,7 @@ function FormField({ label, type, value, name, onChange }) {
           onChange={onChange}
         />
         <Label.Text>
-            {label}
+          {label}
           :
         </Label.Text>
       </Label>

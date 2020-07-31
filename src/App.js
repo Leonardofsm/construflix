@@ -5,23 +5,24 @@ import BannerMain from './components/BannerMain';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 
+import './index.css';
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
-  background: #00000096;
+  background: var(--grayDark);
 `;
 
 
 function App() {
   return (
-    <div >
+    <div>
       <AppWrapper>
       <Menu />
 
       <BannerMain 
         videoTitle={dados_Iniciais.categorias[0].videos[0].titulo}
         url={dados_Iniciais.categorias[0].videos[0].url}
-        videoDescription={"Oque um front=end faz ?"}
+        videoDescription={"Oque um front-end faz ?"}
       />
 
       <Carousel

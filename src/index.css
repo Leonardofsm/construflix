@@ -6,9 +6,9 @@
 :root {
   --primary: #2A7AE4;
   --black: #000000;
-  --blackLigth: #00000096;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
+  --grayDark: #141414 ;
   --grayMedium: #e5e5e5; 
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;

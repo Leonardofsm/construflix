@@ -4,6 +4,7 @@ const Button = styled.button`
     color: white;
     border: 1px solid white;
     box-sizing: border-box;
+    background: var(--black);
     cursor: pointer;
     padding: 16px 24px;
     font-style: normal;
@@ -20,4 +21,4 @@ const Button = styled.button`
     }
 `;
 
-export default Button; 
+export default Button;

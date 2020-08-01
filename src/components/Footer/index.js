@@ -11,7 +11,10 @@ function Footer() {
         Orgulhosamente criado durante a
         {' '}
         <a href="https://www.alura.com.br/">
-          Imersão React da Alura
+          Imersão React da Alura por,
+        </a>
+        <a href="https://www.leonardofsm.com/">
+          Leonardo Mendonça
         </a>
       </p>
     </FooterBase>

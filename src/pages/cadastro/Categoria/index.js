@@ -4,10 +4,12 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
+
 
 function CadastroCategoria() {
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
     cor: '',
   };
@@ -17,11 +19,11 @@ function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    const URL_TOP = window.location.hostname.includes('localhost')
+    const URL = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080/categorias'
       : 'https://construflix.herokuapp.com/categorias';
     // E a ju ama variáveis
-    fetch(URL_TOP)
+    fetch(URL)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
         setCategorias([
@@ -34,7 +36,7 @@ function CadastroCategoria() {
     <PageDefault>
       <h1>
         Cadastro de Categoria:
-        {values.nome}
+        {values.titulo}
       </h1>
 
       <form onSubmit={function handleSubmit(infosDoEvento) {
@@ -50,8 +52,8 @@ function CadastroCategoria() {
 
         <FormField
           label="Nome da Categoria"
-          name="nome"
-          value={values.nome}
+          name="titulo"
+          value={values.titulo}
           onChange={handleChange}
         />
 
